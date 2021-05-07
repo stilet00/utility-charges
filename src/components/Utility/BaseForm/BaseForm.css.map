@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAe;EACb,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,8BAA0B;;AAC3C,iBAAiB;EACf,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,aAAa;EAC9B,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,MAAM;;AAEhB,yBAAyB;EACvB,iBAAiB;IACf,KAAK,EAAE,GAAG",
+"sources": ["BaseForm.sass"],
+"names": [],
+"file": "BaseForm.css"
+}
