@@ -39,6 +39,8 @@
   border-right: 2px solid #fed57b; }
 
 .blue-container {
-  background-color: #cfe8fc; }
+  background-color: #cfe8fc;
+  padding: 10px;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=UtilityPage.css.map */

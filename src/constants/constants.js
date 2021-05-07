@@ -1,7 +1,13 @@
 export const DATA = {
-    previousData: 0,
-    currentData: 0,
-    sum: 0,
+    prevElectricity: 0,
+    currElectricity: 0,
+    electricitySum: 0,
+    prevWater: 0,
+    currWater: 0,
+    waterSum: 0,
+    prevGas: 0,
+    currGas: 0,
+    gasSum: 0
 }
 
 export const ELECTRICITY_PRICE = 1.68;
