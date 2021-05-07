@@ -1,8 +1,7 @@
 .calc-container {
   height: 350px;
   margin-top: 20px;
-  border-bottom: 2px dotted rgba(0, 0, 0, 0.05);
-}
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.05); }
 
 .fields-container {
   display: flex;
@@ -10,27 +9,21 @@
   justify-content: space-between;
   width: 60%;
   height: 280px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .calculate-button {
-  width: 33%;
-}
+  width: 33%; }
 
 .buttons {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-}
+  width: 100%; }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .fields-container {
-    width: 90%;
-  }
+    width: 90%; }
 
   .calculate-button {
-    width: 45%;
-  }
-}
+    width: 45%; } }
 
 /*# sourceMappingURL=BaseForm.css.map */
