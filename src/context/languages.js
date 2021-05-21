@@ -30,7 +30,7 @@ export const LANGUAGES = {
     ukrainian: {
         header: 'Калькулятор послуг',
         total: 'Сума',
-        electricity: 'електрика',
+        electricity: 'Eлектрика',
         water: 'Вода',
         gas: 'Газ',
         previous: 'Попередній',
