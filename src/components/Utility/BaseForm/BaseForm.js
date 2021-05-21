@@ -1,6 +1,7 @@
 import React from "react";
 import "./BaseForm.css";
 import { Button, TextField } from "@material-ui/core";
+import { useForm } from "./hooks";
 function BaseForm({
   previous,
   current,
@@ -10,10 +11,11 @@ function BaseForm({
   total,
   clear,
 }) {
+  const { handleFocus } = useForm()
   return (
     <div className={"calc-container"}>
       <h4>{name}</h4>
-      <div className={"fields-container"}>
+      <div className={"fields-container"} onClick={handleFocus}>
         <TextField
           label="previous"
           variant="outlined"
