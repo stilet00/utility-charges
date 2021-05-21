@@ -37,6 +37,7 @@ function UtilityPage() {
                                   onInputChange={onInputChange}
                                   total={getSum}
                                   clear={clear}
+                                  header={language.electricity}
                                   sum={data.sumElectricity}
                               />
                               <BaseForm
@@ -46,6 +47,7 @@ function UtilityPage() {
                                   onInputChange={onInputChange}
                                   total={getSum}
                                   clear={clear}
+                                  header={language.water}
                                   sum={data.sumWater}
                               />
                               <BaseForm
@@ -55,6 +57,7 @@ function UtilityPage() {
                                   onInputChange={onInputChange}
                                   total={getSum}
                                   clear={clear}
+                                  header={language.gas}
                                   sum={data.sumGas}
                               />
                           </Typography>

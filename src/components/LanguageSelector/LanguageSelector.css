@@ -8,15 +8,18 @@
   height: 100%;
   width: 45%;
   outline: none;
-  border: none;
   border-radius: 5px;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/250px-Flag_of_Ukraine.svg.png");
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s;
+  border: 2px solid white; }
+  .language-button:hover {
+    box-shadow: 5px 5px 5px darkgrey; }
   .language-button:last-child {
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/250px-Flag_of_Russia.svg.png"); }
 
 .button-active {
-  border: 2px solid dodgerblue; }
+  border-color: green; }
 
 /*# sourceMappingURL=LanguageSelector.css.map */

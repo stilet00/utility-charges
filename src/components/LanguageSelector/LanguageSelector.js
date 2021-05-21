@@ -1,15 +1,24 @@
-import React from 'react';
-import { Button } from "@material-ui/core";
+import React, { useState } from 'react';
 import "./LanguageSelector.css"
 import { LangContext } from "../../context/languages";
 function LanguageSelector (props) {
+    const [ buttonStyleToggler, setButtonStyleToggler ] = useState(true)
+    function toggleButtonStyle() {
+        setButtonStyleToggler(!buttonStyleToggler)
+    }
     return (
         <LangContext.Consumer>
             {
                 ({setRussianLang, setUkrainianLang}) => (
                     <div className={'language-buttons-container'}>
-                        <button variant={'outlined'} className={"language-button button-active"} onClick={setUkrainianLang}></button>
-                        <button variant={'outlined'} className={"language-button"} onClick={setRussianLang}></button>
+                        <button variant={'outlined'} className={buttonStyleToggler ? "language-button button-active" : "language-button"} onClick={() => {
+                            setUkrainianLang();
+                            toggleButtonStyle();
+                        }}></button>
+                        <button variant={'outlined'} className={!buttonStyleToggler ? "language-button button-active" : "language-button"} onClick={() => {
+                            setRussianLang();
+                            toggleButtonStyle();
+                        }}></button>
                     </div>
                 )
             }

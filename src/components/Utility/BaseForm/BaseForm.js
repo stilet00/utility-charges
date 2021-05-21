@@ -7,6 +7,7 @@ function BaseForm({
   previous,
   current,
   name,
+  header,
   onInputChange,
   sum,
   total,
@@ -18,7 +19,7 @@ function BaseForm({
         {
           ({ language }) => (
               <div className={"calc-container"}>
-                <h4>{name}</h4>
+                <h4>{header}</h4>
                 <div className={"fields-container"} onClick={handleFocus}>
                   <TextField
                       label={language.previous}

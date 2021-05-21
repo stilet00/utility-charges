@@ -44,7 +44,7 @@ export const LANGUAGES = {
 
 export const LangContext = createContext(null);
 export function useLanguageContext() {
-    const [language, setLanguage] = useState(LANGUAGES.russian);
+    const [language, setLanguage] = useState(LANGUAGES.ukrainian);
     function setRussianLang() {
         setLanguage(LANGUAGES.russian)
     }
