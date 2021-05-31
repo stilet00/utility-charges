@@ -3,6 +3,7 @@ import "./BaseForm.css";
 import { Button, TextField } from "@material-ui/core";
 import { useForm } from "./hooks";
 import { LangContext } from "../../../context/languages";
+import { CSSTransition } from "react-transition-group";
 function BaseForm({
   previous,
   current,
@@ -12,61 +13,66 @@ function BaseForm({
   sum,
   total,
   clear,
+  shown,
 }) {
-  const { handleFocus } = useForm()
+  const { handleFocus } = useForm();
   return (
-      <LangContext.Consumer>
-        {
-          ({ language }) => (
-              <div className={"calc-container"}>
-                <h4>{header}</h4>
-                <div className={"fields-container"} onClick={handleFocus}>
-                  <TextField
-                      label={language.previous}
-                      variant="outlined"
-                      inputProps={{ style: { textAlign: "right" } }}
-                      value={previous}
-                      name={"prev" + name}
-                      onChange={onInputChange}
-                  />
-                  <TextField
-                      label={language.current}
-                      variant="outlined"
-                      inputProps={{ style: { textAlign: "right" } }}
-                      value={current}
-                      name={"curr" + name}
-                      onChange={onInputChange}
-                  />
-                  <TextField
-                      label={language.currency}
-                      variant="filled"
-                      value={sum}
-                      disabled
-                  />
-                  <div className={"buttons"}>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={"calculate-button"}
-                        onClick={() => total(name)}
-                    >
-                      {language.buttonCalculate}
-                    </Button>
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={"calculate-button"}
-                        onClick={() => clear(name)}
-                    >
-                      {language.buttonClear}
-                    </Button>
-                  </div>
-                </div>
+    <LangContext.Consumer>
+      {({ language }) => (
+        <CSSTransition
+          in={shown}
+          timeout={300}
+          classNames="slide"
+          unmountOnExit
+        >
+          <div className={shown ? "calc-container" : "calc-container hidden"}>
+            <h4>{header}</h4>
+            <div className={"fields-container"} onClick={handleFocus}>
+              <TextField
+                label={language.previous}
+                variant="outlined"
+                inputProps={{ style: { textAlign: "right" } }}
+                value={previous}
+                name={"prev" + name}
+                onChange={onInputChange}
+              />
+              <TextField
+                label={language.current}
+                variant="outlined"
+                inputProps={{ style: { textAlign: "right" } }}
+                value={current}
+                name={"curr" + name}
+                onChange={onInputChange}
+              />
+              <TextField
+                label={language.currency}
+                variant="filled"
+                value={sum}
+                disabled
+              />
+              <div className={"buttons"}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={"calculate-button"}
+                  onClick={() => total(name)}
+                >
+                  {language.buttonCalculate}
+                </Button>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  className={"calculate-button"}
+                  onClick={() => clear(name)}
+                >
+                  {language.buttonClear}
+                </Button>
               </div>
-          )
-        }
-
-      </LangContext.Consumer>
+            </div>
+          </div>
+        </CSSTransition>
+      )}
+    </LangContext.Consumer>
   );
 }
 

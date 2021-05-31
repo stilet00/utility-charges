@@ -2,7 +2,8 @@
   width: 80px;
   max-width: 100px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 
 .language-button {
   height: 100%;
@@ -13,13 +14,15 @@
   background-position: center;
   background-size: cover;
   transition: 0.5s;
-  border: 2px solid white; }
-  .language-button:hover {
-    box-shadow: 5px 5px 5px darkgrey; }
-  .language-button:last-child {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/250px-Flag_of_Russia.svg.png"); }
+  border: 2px solid white;
+}
+.language-button:last-child {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/250px-Flag_of_Russia.svg.png");
+}
 
 .button-active {
-  border-color: green; }
+  border-color: green;
+  box-shadow: 5px 5px 5px darkgrey;
+}
 
 /*# sourceMappingURL=LanguageSelector.css.map */

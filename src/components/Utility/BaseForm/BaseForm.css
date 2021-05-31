@@ -1,7 +1,21 @@
 .calc-container {
-  height: 350px;
-  margin-top: 20px;
-  border-bottom: 2px dotted rgba(0, 0, 0, 0.05); }
+  display: block;
+  box-sizing: border-box;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.05);
+  border-top: 2px dotted rgba(0, 0, 0, 0.05);
+}
+
+h4 {
+  margin: 0 0 10px 0;
+}
+
+.hidden {
+  display: none;
+}
 
 .fields-container {
   display: flex;
@@ -9,21 +23,47 @@
   justify-content: space-between;
   width: 60%;
   height: 280px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .calculate-button {
-  width: 38%; }
+  width: 38%;
+}
 
 .buttons {
   display: flex;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+}
 
 @media (max-width: 500px) {
   .fields-container {
-    width: 90%; }
+    width: 90%;
+  }
 
   .calculate-button {
-    width: 45%; } }
+    width: 45%;
+  }
+}
+.slide-enter {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 300ms;
+}
+
+.slide-exit {
+  opacity: 1;
+}
+
+.slide-exit-active {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 1000ms;
+}
 
 /*# sourceMappingURL=BaseForm.css.map */

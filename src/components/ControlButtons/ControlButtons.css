@@ -1,0 +1,8 @@
+.control-buttons {
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  margin: 10px auto;
+}
+
+/*# sourceMappingURL=ControlButtons.css.map */
