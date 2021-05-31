@@ -19,14 +19,16 @@ function BaseForm({
   return (
     <LangContext.Consumer>
       {({ language }) => (
-        <CSSTransition
-          in={shown}
-          timeout={300}
-          classNames="slide"
-          unmountOnExit
-        >
           <div className={shown ? "calc-container" : "calc-container hidden"}>
+            <CSSTransition
+                in={shown}
+                timeout={300}
+                classNames="slide"
+                unmountOnExit
+            >
             <h4>{header}</h4>
+
+            </CSSTransition>
             <div className={"fields-container"} onClick={handleFocus}>
               <TextField
                 label={language.previous}
@@ -70,7 +72,6 @@ function BaseForm({
               </div>
             </div>
           </div>
-        </CSSTransition>
       )}
     </LangContext.Consumer>
   );
