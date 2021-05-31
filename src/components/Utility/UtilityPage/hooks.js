@@ -8,6 +8,13 @@ import {
 
 export function useUtility() {
   const [data, setData] = useState(DEFAULT_DATA);
+  const [pageOpened, setPageOpened] = useState(1);
+  function goAhead() {
+    pageOpened !== 3 ? setPageOpened(pageOpened + 1) : setPageOpened(1);
+  }
+  function goBack() {
+    pageOpened !== 1 ? setPageOpened(pageOpened - 1) : setPageOpened(3);
+  }
   function onInputChange(e) {
     e.target.value[0] === "0"
       ? e.target.value.slice(1)
@@ -41,5 +48,8 @@ export function useUtility() {
     onInputChange,
     getSum,
     clear,
+    pageOpened,
+    goAhead,
+    goBack,
   };
 }

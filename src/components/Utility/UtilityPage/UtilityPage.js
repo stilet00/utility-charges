@@ -7,15 +7,22 @@ import { useUtility } from "./hooks";
 import { LangContext } from "../../../context/languages";
 import LanguageSelector from "../../LanguageSelector/LanguageSelector";
 import ControlButtons from "../../ControlButtons/ControlButtons";
+import {
+  ELECTRICITY_PRICE,
+  WATER_PRICE,
+  GAS_PRICE,
+} from "../../../constants/constants";
 function UtilityPage() {
-  const { data, onInputChange, getSum, clear } = useUtility();
-  const [pageOpened, setPageOpened] = useState(1);
-  function goAhead() {
-    pageOpened !== 3 ? setPageOpened(pageOpened + 1) : setPageOpened(1);
-  }
-  function goBack() {
-    pageOpened !== 1 ? setPageOpened(pageOpened - 1) : setPageOpened(3);
-  }
+  const {
+    data,
+    onInputChange,
+    getSum,
+    clear,
+    goAhead,
+    pageOpened,
+    goBack,
+  } = useUtility();
+
   return (
     <LangContext.Consumer>
       {({ language }) => (
@@ -46,6 +53,7 @@ function UtilityPage() {
                 header={language.electricity}
                 sum={data.sumElectricity}
                 shown={pageOpened === 1}
+                rate={ELECTRICITY_PRICE + " грн/кВт"}
               />
               <BaseForm
                 name={"Water"}
@@ -57,6 +65,7 @@ function UtilityPage() {
                 header={language.water}
                 sum={data.sumWater}
                 shown={pageOpened === 2}
+                rate={WATER_PRICE + " грн / 1м³"}
               />
               <BaseForm
                 name={"Gas"}
@@ -68,6 +77,7 @@ function UtilityPage() {
                 header={language.gas}
                 sum={data.sumGas}
                 shown={pageOpened === 3}
+                rate={GAS_PRICE + " грн / 1м³"}
               />
               <ControlButtons ahead={goAhead} previous={goBack} />
             </Typography>

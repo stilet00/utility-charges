@@ -2,9 +2,11 @@
   display: flex;
   width: 60%;
   justify-content: space-evenly;
-  margin: 10px auto; }
+  margin: 10px auto;
+}
 
 .backward-arrow {
-  transform: rotate(180deg) !important; }
+  transform: rotate(180deg) !important;
+}
 
 /*# sourceMappingURL=ControlButtons.css.map */
