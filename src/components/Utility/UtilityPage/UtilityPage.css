@@ -1,25 +1,22 @@
-@import "https://fonts.googleapis.com/css?family=Merriweather";
+@import 'https://fonts.googleapis.com/css?family=Merriweather';
 .d14 {
   padding: 20px 0;
-  text-align: center;
-}
-.d14 h3 {
-  font-family: "Merriweather", serif;
-  font-size: 20px;
-  letter-spacing: 1px;
-  max-width: 320px;
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  color: black;
-}
+  text-align: center; }
+  .d14 h3 {
+    font-family: "Merriweather", serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    max-width: 320px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    color: black; }
 
 .d14 h3 {
   display: table;
   width: auto;
   margin: 15px auto;
-  letter-spacing: 2px;
-}
+  letter-spacing: 2px; }
 
 .d14 h3:before {
   content: "";
@@ -29,8 +26,7 @@
   width: 30px;
   height: 20px;
   border-top: 2px solid #fed57b;
-  border-left: 2px solid #fed57b;
-}
+  border-left: 2px solid #fed57b; }
 
 .d14 h3::after {
   content: "";
@@ -40,13 +36,19 @@
   width: 30px;
   height: 20px;
   border-bottom: 2px solid #fed57b;
-  border-right: 2px solid #fed57b;
-}
+  border-right: 2px solid #fed57b; }
 
 .blue-container {
   background-color: #cfe8fc;
   padding: 10px;
-  border-radius: 5px;
-}
+  border-radius: 5px; }
+
+.header-buttons {
+  width: 60% !important;
+  margin: 0 auto; }
+
+@media (max-width: 500px) {
+  .header-buttons {
+    width: 90% !important; } }
 
 /*# sourceMappingURL=UtilityPage.css.map */

@@ -26,7 +26,7 @@ function UtilityPage() {
               <h3>{language.header}</h3>
             </div>
             <Typography component="div" className={"blue-container"}>
-              <div className="buttons">
+              <div className="buttons header-buttons">
                 <SimplePopper
                   total={(
                     Number(data.sumElectricity) +
