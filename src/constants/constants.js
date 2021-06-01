@@ -12,4 +12,4 @@ export const DEFAULT_DATA = {
 
 export const ELECTRICITY_PRICE = 1.68;
 export const WATER_PRICE = 27.87;
-export const GAS_PRICE = 8.75;
+export const GAS_PRICE = 10.2;

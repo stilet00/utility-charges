@@ -22,7 +22,6 @@ function UtilityPage() {
     pageOpened,
     goBack,
   } = useUtility();
-
   return (
     <LangContext.Consumer>
       {({ language }) => (
